@@ -123,15 +123,15 @@
 
     $scope.reset = function(p){
       if (p){
-    	  p.drinks.length = 0;
-          p.stopped = true;
-          p.BAC = 0;
-          p.pcBAC = 0;
-          p.NettmL = 0;
-          p.startmL = p.NettmL;
-          p.state = dump(p.pcBAC);    
-          p.prevUpdateTime = new Date();
-          $scope.alias.person = p;
+    	  p.drinks = [];
+        p.stopped = true;
+        p.BAC = 0;
+        p.pcBAC = 0;
+        p.NettmL = 0;
+        p.startmL = p.NettmL;
+        p.state = dump(p.pcBAC);    
+        p.prevUpdateTime = new Date();
+        $scope.alias.person = p;
       }
       initChart('reset');
       localStorage.clear();
